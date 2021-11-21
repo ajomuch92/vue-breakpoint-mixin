@@ -7,7 +7,7 @@ NPM:
 ```bash
 npm install --save vue-breakpoint-mixin
 ```
-Import into your vue file and use it:
+Import into your Vue component and use it:
 
 ```javascript
 import VueBreakpointMixin from'vue-breakpoint-mixin';

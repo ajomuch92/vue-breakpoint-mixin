@@ -9,30 +9,30 @@ export default {
   created () {
   },
   mounted () {
-    window.addEventListener('resize', this.resizeHandler)
-    this.resizeHandler()
+    window.addEventListener('resize', this.resizeHandler);
+    this.resizeHandler();
   },
   beforeDestroy () {
-    window.removeEventListener('resize', this.resizeHandler)
+    window.removeEventListener('resize', this.resizeHandler);
   },
   computed: {
     isMobile () {
-      return ['sm', 'xsm'].includes(this.sizeType)
+      return ['sm', 'xsm'].includes(this.sizeType);
     },
     isTablet () {
-      return ['m', 'l'].includes(this.sizeType)
+      return ['m', 'l'].includes(this.sizeType);
     },
     isDesktop () {
-      return ['xl', 'l'].includes(this.sizeType)
+      return ['xl', 'l'].includes(this.sizeType);
     }
   },
   methods: {
     resizeHandler () {
-      const xlResult = window.matchMedia(`(min-width: ${xlBreakpoint}px)`)
-      const lResult = window.matchMedia(`(min-width: ${lBreakpoint}px)`)
-      const mResult = window.matchMedia(`(min-width: ${mBreakpoint}px)`)
-      const smResult = window.matchMedia(`(min-width: ${smBreakpoint}px)`)
-      const xsmResult = window.matchMedia(`(max-width: ${smBreakpoint}px)`)
+      const xlResult = window.matchMedia(`(min-width: ${this.xlBreakpoint}px)`)
+      const lResult = window.matchMedia(`(min-width: ${this.lBreakpoint}px)`)
+      const mResult = window.matchMedia(`(min-width: ${this.mBreakpoint}px)`)
+      const smResult = window.matchMedia(`(min-width: ${this.smBreakpoint}px)`)
+      const xsmResult = window.matchMedia(`(max-width: ${this.smBreakpoint}px)`)
       if (xlResult.matches) {
         this.sizeType = 'xl';
       } else if (lResult.matches) {
