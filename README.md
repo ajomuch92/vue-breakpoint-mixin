@@ -29,7 +29,7 @@ export default {
 | smBreakpoint | 768 |
 | sizeType | xsm, sm, m, l or xl values (depending of the window size) |
 
-You can change any of these values to change on created or mounted method to change the watcher.
+You can change any of these values on created or mounted method to custom the watcher.
 
 **Computed**
 |  Name | Description   |
