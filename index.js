@@ -28,11 +28,11 @@ export default {
   },
   methods: {
     resizeHandler () {
-      const xlResult = window.matchMedia(`(min-width: {xlBreakpoint}px)`)
-      const lResult = window.matchMedia(`(min-width: {lBreakpoint}px)`)
-      const mResult = window.matchMedia(`(min-width: {mBreakpoint}px)`)
-      const smResult = window.matchMedia(`(min-width: {smBreakpoint}px)`)
-      const xsmResult = window.matchMedia(`(max-width: {smBreakpoint}px)`)
+      const xlResult = window.matchMedia(`(min-width: ${xlBreakpoint}px)`)
+      const lResult = window.matchMedia(`(min-width: ${lBreakpoint}px)`)
+      const mResult = window.matchMedia(`(min-width: ${mBreakpoint}px)`)
+      const smResult = window.matchMedia(`(min-width: ${smBreakpoint}px)`)
+      const xsmResult = window.matchMedia(`(max-width: ${smBreakpoint}px)`)
       if (xlResult.matches) {
         this.sizeType = 'xl';
       } else if (lResult.matches) {
