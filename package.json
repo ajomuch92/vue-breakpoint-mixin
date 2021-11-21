@@ -1,0 +1,26 @@
+{
+  "name": "vue-breakpoint-mixin",
+  "version": "1.0.0",
+  "description": "Package to use as a watcher for breakpoints",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ajomuch92/vue-breakpoint-mixin.git"
+  },
+  "keywords": [
+    "vue",
+    "watcher",
+    "breakpoints",
+    "responsive",
+    "javascript"
+  ],
+  "author": "Aarón Montes",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ajomuch92/vue-breakpoint-mixin/issues"
+  },
+  "homepage": "https://github.com/ajomuch92/vue-breakpoint-mixin#readme"
+}
