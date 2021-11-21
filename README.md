@@ -14,7 +14,7 @@ import VueBreakpointMixin from'vue-breakpoint-mixin';
 
 export default {
   ...
-  mixin: [VueBreakpointMixin],
+  mixins: [VueBreakpointMixin],
   ...
 }
 

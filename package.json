@@ -1,6 +1,6 @@
 {
   "name": "vue-breakpoint-mixin",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Package to use as a watcher for breakpoints",
   "main": "index.js",
   "scripts": {
