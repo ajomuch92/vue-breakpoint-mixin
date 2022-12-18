@@ -1,5 +1,5 @@
 # Vue Breakpoint Mixin
-This package contains a mixin to watch the different breakpoints for responsiveness. It's based on the same braeakpoints from [Bulma](https://bulma.io/documentation/overview/responsiveness/) but you can customize them as you want. See an example [here](https://github.com/ajomuch92/vue-breakpoint-mixin/tree/main/example)
+This package contains a mixin to watch the different breakpoints for responsiveness. It's based on the same braeakpoints from [Bulma](https://bulma.io/documentation/overview/responsiveness/) but you can customize them as you want. See an example [here](https://github.com/ajomuch92/vue-breakpoint-mixin/tree/main/example).
 
 # Instalation
 
