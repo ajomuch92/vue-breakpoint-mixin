@@ -3,6 +3,7 @@
     <h1 v-if="isMobile">Mobile Screen</h1>
     <h1 v-else-if="isTablet">Tablet Screen</h1>
     <h1 v-else-if="isDesktop">Desktop Screen</h1>
+    <h2>Screen Size: <b>{{sizeType}}</b></h2>
     <p>Adjust screen to see different messages</p>
   </div>
 </template>
