@@ -27,19 +27,27 @@ export default {
 | lBreakpoint | 1216 |
 | mBreakpoint | 1024 |
 | smBreakpoint | 768 |
-| sizeType | xsm, sm, m, l or xl values (depending of the window size) |
+| xsmBreakpoint | 375 |
+| windowWidth | undefined (indicate the window width) |
+| windowHeight | undefined (indicate the window height) |
+| sizeType | xsm, sm, m, l, xl or xxl values (depending of the window size) |
 
 You can change any of these values on created or mounted method to custom the watcher.
 
 **Computed**
 |  Name | Description   |
 | ------------ | ------------ |
-| isMobile | Compares screen width with smBreakpoint (as max-width smBreakpoint) |
-| isTablet | Compares screen width with mBreakpoint and lBreakpoint (as min-width mBreakpoint or lBreakpoint)  |
-| isDesktop | Compares screen width with lBreakpoint  and xlBreakpoint (as min-width lBreakpoint  or xlBreakpoint)  |
+| isMobile | if sizeType is xsm or sm |
+| isTablet | if sizeType is m |
+| isDesktop | if sizeType is l, xl or xxl  |
 
 ## Author
 This library is created by [Aarón Montes](https://github.com/ajomuch92 "Aarón Montes"). 
 
 ## License
 MIT
+
+
+## Development
+
+Want to contribute? Great!. Open a [new PR here](https://github.com/ajomuch92/vue-breakpoint-mixin/pulls) or a [new issue here](https://github.com/ajomuch92/vue-breakpoint-mixin/issues)
