@@ -8,6 +8,7 @@ export default {
     xsmBreakpoint: 375,
     windowWidth: undefined,
     windowHeight: undefined,
+    orientation: '',
   }),
   mounted () {
     window.addEventListener('resize', this.resizeHandler);
@@ -29,27 +30,32 @@ export default {
   },
   methods: {
     resizeHandler () {
-      this.windowWidth = window.innerWidth;
-      this.windowHeight = window.innerHeight;
-      const xxlResult = window.matchMedia(`(min-width: ${this.xlBreakpoint}px`);
-      const xlResult = window.matchMedia(`(min-width: ${this.lBreakpoint}px) and (max-width: ${this.xlBreakpoint - 1}px)`);
-      const lResult = window.matchMedia(`(min-width: ${this.mBreakpoint}px) and (max-width: ${this.lBreakpoint - 1}px)`);
-      const mResult = window.matchMedia(`(min-width: ${this.smBreakpoint + 1}px) and (max-width: ${this.mBreakpoint - 1}px)`);
-      const smResult = window.matchMedia(`(min-width: ${this.xsmBreakpoint + 1}px) and (max-width: ${this.smBreakpoint}px)`);
-      const xsmResult = window.matchMedia(`(max-width: ${this.xsmBreakpoint}px)`);
-      if (xxlResult.matches) {
+      const { innerWidth, innerHeight } = window;
+      this.windowWidth = innerWidth;
+      this.windowHeight = innerHeight;
+      this.orientation = window.screen.orientation.type.split('-')[0];
+      const xxlResult = this.xlBreakpoint >= innerWidth;
+      const xlResult = this.inRange(this.lBreakpoint, this.xlBreakpoint, innerWidth);
+      const lResult = this.inRange(this.mBreakpoint, this.lBreakpoint, innerWidth);
+      const mResult = this.inRange(this.smBreakpoint, this.mBreakpoint, innerWidth);
+      const smResult = this.inRange(this.xsmBreakpoint, this.smBreakpoint, innerWidth);
+      const xsmResult = innerWidth < this.xsmBreakpoint;
+      if (xxlResult) {
         this.sizeType = 'xxl';
-      } else if (xlResult.matches) {
+      } else if (xlResult) {
         this.sizeType = 'xl';
-      } else if (lResult.matches) {
+      } else if (lResult) {
         this.sizeType = 'l';
-      } else if (mResult.matches) {
+      } else if (mResult) {
         this.sizeType = 'm';
-      } else if (smResult.matches) {
+      } else if (smResult) {
         this.sizeType = 'sm';
-      } else if (xsmResult.matches) {
+      } else if (xsmResult) {
         this.sizeType = 'xsm';
       }
+    },
+    inRange(minValue, maxValue, value) {
+      return minValue <= value && value < maxValue;
     }
   }
 }
