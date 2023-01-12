@@ -31,6 +31,7 @@ export default {
 | windowWidth | undefined (indicate the window width) |
 | windowHeight | undefined (indicate the window height) |
 | sizeType | xsm, sm, m, l, xl or xxl values (depending of the window size) |
+| orientation | portrait or landscape |
 
 You can change any of these values on created or mounted method to custom the watcher.
 
