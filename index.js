@@ -34,7 +34,7 @@ export default {
       this.windowWidth = innerWidth;
       this.windowHeight = innerHeight;
       this.orientation = window.screen.orientation.type.split('-')[0];
-      const xxlResult = this.xlBreakpoint >= innerWidth;
+      const xxlResult = innerWidth >= this.xlBreakpoint;
       const xlResult = this.inRange(this.lBreakpoint, this.xlBreakpoint, innerWidth);
       const lResult = this.inRange(this.mBreakpoint, this.lBreakpoint, innerWidth);
       const mResult = this.inRange(this.smBreakpoint, this.mBreakpoint, innerWidth);
