@@ -42,6 +42,16 @@ You can change any of these values on created or mounted method to custom the wa
 | isTablet | if sizeType is m |
 | isDesktop | if sizeType is l, xl or xxl  |
 
+**Method**
+|  Name | Description   |
+| ------------ | ------------ |
+| classUtility | Method that receive a object as parameter (config = {mobile, tablet, desktop}) to get an specific class by size|
+
+Example
+```html
+<div id="my-div" :class="classUtility({mobile: 'margin-0', tablet: 'margin-2': desktop: 'margin-5'})"></div>
+
+```
 ## Author
 This library is created by [Aarón Montes](https://github.com/ajomuch92 "Aarón Montes"). 
 
