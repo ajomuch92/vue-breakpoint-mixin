@@ -57,6 +57,16 @@ export default {
     },
     inRange(minValue, maxValue, value) {
       return minValue <= value && value < maxValue;
+    },
+    classUtility(config = {}) {
+      if (this.isMobile) {
+        return config.mobile || '';
+      } else if (this.isTablet) {
+        return config.tablet || '';
+      } else if (this.isDesktop) {
+        return config.desktop || '';
+      }
+      return '';
     }
   }
 }
