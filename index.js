@@ -33,7 +33,8 @@ export default {
       const { innerWidth, innerHeight } = window;
       this.windowWidth = innerWidth;
       this.windowHeight = innerHeight;
-      this.orientation = window.screen.orientation.type.split('-')[0];
+      const orientation = window.matchMedia('(orientation: landscape)');
+      this.orientation = orientation.matches ? 'landscape' : 'portrait';
       const xxlResult = innerWidth >= this.xlBreakpoint;
       const xlResult = this.inRange(this.lBreakpoint, this.xlBreakpoint, innerWidth);
       const lResult = this.inRange(this.mBreakpoint, this.lBreakpoint, innerWidth);
