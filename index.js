@@ -67,6 +67,12 @@ export default {
         return config.desktop || '';
       }
       return '';
-    }
+    },
+    isAndroid() {
+      return /Android/i.test(navigator.userAgent);
+    },
+    isIOS() {
+      return /iPhone|iPad|iPod/i.test(navigator.userAgent);
+    },
   }
 }
