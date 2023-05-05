@@ -6,6 +6,9 @@
     <h2>Screen Type: <b>{{ sizeType }}</b></h2>
     <h3>Screen Size: <b>{{ windowWidth }}px</b></h3>
     <p>Adjust screen to see different messages</p>
+    <p v-if="isAndroid()">Android</p>
+    <p v-else-if="isIOS()">iOS</p>
+    <p v-else>Another Platform</p>
   </div>
 </template>
 
