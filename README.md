@@ -45,7 +45,9 @@ You can change any of these values on created or mounted method to custom the wa
 **Method**
 |  Name | Description   |
 | ------------ | ------------ |
-| classUtility | Method that receive a object as parameter (config = {mobile, tablet, desktop}) to get an specific class by size|
+| classUtility | Method that receive a object as parameter (config = {mobile, tablet, desktop}) to get an specific class by size |
+| isAndroid | Method to check if the platform where is running is Android |
+| isIOS | Method to check if the platform where is running is Android |
 
 Example
 ```html
